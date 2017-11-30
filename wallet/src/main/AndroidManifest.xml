@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.coinomi.wallet"
+    package="com.khcoin.wallet"
     android:installLocation="internalOnly" >
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -47,14 +47,14 @@
         android:xlargeScreens="true" />
 
     <application
-        android:name="com.coinomi.wallet.WalletApplication"
+        android:name="com.khcoin.wallet.WalletApplication"
         android:allowBackup="false"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/ic_launcher_dev"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.coinomi.wallet.ui.WalletActivity"
+            android:name="com.khcoin.wallet.ui.WalletActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" >
@@ -65,7 +65,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.SendActivity"
+            android:name="com.khcoin.wallet.ui.SendActivity"
             android:label="@string/send_coins_activity_title"
             android:theme="@style/AppTheme" >
             <intent-filter android:label="@string/app_name" >
@@ -106,151 +106,152 @@
                 <data android:scheme="egulden" />
                 <data android:scheme="clubcoin" />
                 <data android:scheme="richcoin" />
+                <data android:scheme="khcoin" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.IntroActivity"
+            android:name="com.khcoin.wallet.ui.IntroActivity"
             android:theme="@style/AppThemeNoTitleBar"
             android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.PasswordConfirmationActivity"
+            android:name="com.khcoin.wallet.ui.PasswordConfirmationActivity"
             android:theme="@style/AppThemeNoTitleBar"
             android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.SignTransactionActivity"
+            android:name="com.khcoin.wallet.ui.SignTransactionActivity"
             android:theme="@style/AppThemeNoTitleBar"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.ScanActivity"
+            android:name="com.khcoin.wallet.ui.ScanActivity"
             android:configChanges="orientation|keyboard|keyboardHidden"
             android:screenOrientation="landscape"
             android:stateNotNeeded="true"
             android:theme="@style/AppThemeNoTitleBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.coinomi.wallet.ui.AboutActivity"
+            android:name="com.khcoin.wallet.ui.AboutActivity"
             android:label="@string/title_activity_about"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.coinomi.wallet.ui.WalletActivity" />
+                android:value="com.khcoin.wallet.ui.WalletActivity" />
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.AddCoinsActivity"
+            android:name="com.khcoin.wallet.ui.AddCoinsActivity"
             android:label="@string/title_activity_add_coins"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.coinomi.wallet.ui.WalletActivity" />
+                android:value="com.khcoin.wallet.ui.WalletActivity" />
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.TransactionDetailsActivity"
+            android:name="com.khcoin.wallet.ui.TransactionDetailsActivity"
             android:label="@string/title_activity_transaction_details"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.ExchangeRatesActivity"
+            android:name="com.khcoin.wallet.ui.ExchangeRatesActivity"
             android:label="@string/title_activity_exchange_rates"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.coinomi.wallet.ui.WalletActivity" />
+                android:value="com.khcoin.wallet.ui.WalletActivity" />
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.PreviousAddressesActivity"
+            android:name="com.khcoin.wallet.ui.PreviousAddressesActivity"
             android:label="@string/title_activity_previous_addresses"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.SettingsActivity"
+            android:name="com.khcoin.wallet.ui.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.coinomi.wallet.ui.WalletActivity" />
+                android:value="com.khcoin.wallet.ui.WalletActivity" />
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.ShowSeedActivity"
+            android:name="com.khcoin.wallet.ui.ShowSeedActivity"
             android:label="@string/title_activity_show_seed"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.coinomi.wallet.ui.SettingsActivity" />
+                android:value="com.khcoin.wallet.ui.SettingsActivity" />
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.TradeActivity"
+            android:name="com.khcoin.wallet.ui.TradeActivity"
             android:label="@string/title_activity_trade"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.coinomi.wallet.ui.WalletActivity" />
+                android:value="com.khcoin.wallet.ui.WalletActivity" />
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.ExchangeHistoryActivity"
+            android:name="com.khcoin.wallet.ui.ExchangeHistoryActivity"
             android:label="@string/title_activity_exchange_history"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.coinomi.wallet.ui.TradeActivity" />
+                android:value="com.khcoin.wallet.ui.TradeActivity" />
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.TradeStatusActivity"
+            android:name="com.khcoin.wallet.ui.TradeStatusActivity"
             android:label="@string/title_activity_exchange_status"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.SignVerifyMessageActivity"
+            android:name="com.khcoin.wallet.ui.SignVerifyMessageActivity"
             android:label="@string/title_activity_sign_verify_message"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.AccountDetailsActivity"
+            android:name="com.khcoin.wallet.ui.AccountDetailsActivity"
             android:label="@string/title_activity_account_details"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.SweepWalletActivity"
+            android:name="com.khcoin.wallet.ui.SweepWalletActivity"
             android:label="@string/title_activity_sweep_wallet"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.FeesSettingsActivity"
+            android:name="com.khcoin.wallet.ui.FeesSettingsActivity"
             android:label="@string/title_activity_transaction_fees"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.coinomi.wallet.ui.SettingsActivity" />
+                android:value="com.khcoin.wallet.ui.SettingsActivity" />
         </activity>
         <activity
-            android:name="com.coinomi.wallet.ui.DebuggingActivity"
+            android:name="com.khcoin.wallet.ui.DebuggingActivity"
             android:label="@string/title_activity_debugging"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.coinomi.wallet.ui.SettingsActivity" />
+                android:value="com.khcoin.wallet.ui.SettingsActivity" />
         </activity>
 
         <provider
-            android:name="com.coinomi.wallet.ExchangeRatesProvider"
-            android:authorities="com.coinomi.wallet.dev.exchange_rates"
+            android:name="com.khcoin.wallet.ExchangeRatesProvider"
+            android:authorities="com.khcoin.wallet.exchange_rates"
             android:exported="false" />
         <provider
-            android:name="com.coinomi.wallet.AddressBookProvider"
-            android:authorities="com.coinomi.wallet.dev.address_book"
+            android:name="com.khcoin.wallet.AddressBookProvider"
+            android:authorities="com.khcoin.wallet.address_book"
             android:exported="false" />
         <provider
-            android:name=".ExchangeHistoryProvider"
-            android:authorities="com.coinomi.wallet.dev.exchange_history"
+            android:name="com.khcoin.wallet.ExchangeHistoryProvider"
+            android:authorities="com.khcoin.wallet.exchange_history"
             android:exported="false" />
 
         <service
-            android:name="com.coinomi.wallet.service.CoinServiceImpl"
+            android:name="com.khcoin.wallet.service.CoinServiceImpl"
             android:exported="false" />
     </application>
 
