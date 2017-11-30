@@ -453,8 +453,23 @@ public class BalanceFragment extends WalletFragment implements LoaderCallbacks<L
                     if (time1 != time2)
                         return time1 > time2 ? -1 : 1;
                 }
+                /**
+                 * updated by kevin: fix the bug when massive txs generated in a very shot time
+                 * these's a bug here, and will result in
+                 * Caused by: java.lang.IllegalArgumentException: Comparison method violates its general contract!
+                 *
+                 * Reason: the comparator must be transitive, that is if A > B & B > C, then A must > C;
+                 * and if A < B & B < C, then A must <C
+                 * and if A == B & B == C, then B must = C
+                 * so, if three txs (a,b,c) generated in a very short time:
+                 * (a,b,c).pending = true; a.time = b.time =c.tim
+                 * when time program goes to Arrays.equals(a.getHashBytes(),b.getHashBytes()) ? 1:-1;
+                 * the result depends on who comes the first place,
+                 * so it will cause the situation a > b & b > c, while a < c.
+                 *
+                 */
+                return tx1.getHash().toString().compareTo(tx2.getHash().toString());
 
-                return Arrays.equals(tx1.getHashBytes(),tx2.getHashBytes()) ? 1 : -1;
 
             }
         };
