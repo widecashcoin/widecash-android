@@ -4,9 +4,9 @@ android {
     signingConfigs {
     }
     compileSdkVersion 23
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '27.0.3'
     defaultConfig {
-        applicationId "com.khcoin.wallet"
+        applicationId "com.widecash.wallet"
         minSdkVersion 21
         targetSdkVersion 21
         versionCode 56
